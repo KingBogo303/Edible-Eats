@@ -9,7 +9,7 @@ import NavDropdown from "react-bootstrap/NavDropdown";
 const Header = () => {
   return (
     <React.Fragment>
-      <Navbar bg="light" expand="lg">
+      <Navbar bg="light" expand="lg" id="top">
         <Container>
           <Navbar.Brand href="#home" className="logo">
             <img src={logo} alt="edible eats logo" />

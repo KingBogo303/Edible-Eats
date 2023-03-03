@@ -3,3 +3,11 @@
   aspect-ratio: 2/1.5;
   object-fit: cover;
 }
+.btn {
+  background-color: var(--main-color);
+  border-color: var(--main-color);
+  transition: var(--transition);
+}
+.btn:hover {
+  background-color: var(--secondary-color);
+}

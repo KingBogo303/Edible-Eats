@@ -2,7 +2,6 @@ import React from "react";
 import styles from "./CategoryCard.module.css";
 import Button from "react-bootstrap/Button";
 import Card from "react-bootstrap/Card";
-import gg from "../../../assets/images/hero-mobile2.jpg";
 
 const CategoryCard = ({ item }) => {
   console.log(item);
@@ -16,7 +15,7 @@ const CategoryCard = ({ item }) => {
         />
         <Card.Body className="p-4">
           <Card.Title className="fs-2">{item.strCategory}</Card.Title>
-          <Button variant="primary" className="fs-3">
+          <Button variant="primary" className={`fs-3 ${styles.btn}`}>
             Go somewhere
           </Button>
         </Card.Body>

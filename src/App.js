@@ -4,7 +4,7 @@ import Header from "./components/Header";
 import LandingPage from "./pages/LandingPage/LandingPage";
 function App() {
   return (
-    <div className="App">
+    <div className="App" id="app">
       <BrowserRouter>
         <Header />
         <Routes>

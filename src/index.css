@@ -2,7 +2,7 @@
   --main-color: rgba(186, 59, 10);
   --secondary-color: rgba(232, 119, 46);
   --white: #f1f3f5;
-  --transition: 0.35s;
+  --transition: 0.35s ease;
 }
 html {
   font-size: 62.5%;
@@ -44,5 +44,5 @@ body {
   display: grid;
   gap: 1em;
   row-gap: 1.5em;
-  grid-template-columns: repeat(auto-fit, minmax(15em, auto));
+  grid-template-columns: repeat(auto-fit, minmax(20em, auto));
 }

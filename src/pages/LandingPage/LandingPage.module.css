@@ -14,6 +14,30 @@
   transition: var(--transition);
 }
 
+.toTopBtn {
+  display: inline-flex;
+  position: fixed;
+  bottom: 3%;
+  right: 2%;
+  z-index: 1000;
+
+  background-color: var(--main-color);
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  width: 5em;
+  height: 5em;
+}
+.toTopBtn.open {
+  background-color: yellow;
+  display: inline-flex;
+}
+.Arr {
+  color: var(--white);
+  width: 3em;
+  height: 3em;
+}
+
 /* media query */
 @media (max-width: 512px) {
   .mobile {

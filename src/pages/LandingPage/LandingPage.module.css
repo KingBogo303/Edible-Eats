@@ -1,0 +1,27 @@
+.hero {
+  height: 60vh;
+  width: 100%;
+  object-fit: cover;
+}
+.mobile {
+  display: none;
+  opacity: 0;
+  transition: var(--transition);
+}
+.desktop {
+  display: block;
+  opacity: 1;
+  transition: var(--transition);
+}
+
+/* media query */
+@media (max-width: 512px) {
+  .mobile {
+    display: block;
+    opacity: 1;
+  }
+  .desktop {
+    display: none;
+    opacity: 0;
+  }
+}

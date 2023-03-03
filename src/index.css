@@ -42,5 +42,7 @@ body {
 }
 .auto-grid {
   display: grid;
-  grid-template-columns: auto, repeat();
+  gap: 1em;
+  row-gap: 1.5em;
+  grid-template-columns: repeat(auto-fit, minmax(15em, auto));
 }

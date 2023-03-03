@@ -6,7 +6,6 @@ import heroMob from "../../assets/images/hero-mobile.jpg";
 import Category from "./Category/Category";
 
 const LandingPage = () => {
-  // getAllCategory();
   return (
     <React.Fragment>
       <div className="hero mb-5">

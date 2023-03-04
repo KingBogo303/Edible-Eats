@@ -5,6 +5,7 @@ import heroDesk from "../../assets/images/hero-desktop.jpg";
 import heroMob from "../../assets/images/hero-mobile.jpg";
 import Category from "./Category/Category";
 import BackToTopBtn from "../../components/BackToTopBtn";
+import Area from "./Area/Area";
 
 const LandingPage = () => {
   return (
@@ -22,6 +23,7 @@ const LandingPage = () => {
         />
       </div>
       <Category />
+      <Area />
       <BackToTopBtn />
     </React.Fragment>
   );

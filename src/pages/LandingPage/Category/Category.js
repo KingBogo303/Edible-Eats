@@ -18,7 +18,7 @@ const Category = () => {
 
   return (
     <Container id="categories" className="categories mb-5">
-      <h3 className="fs-1 c-main mb-3">
+      <h3 className={`stickyHead fs-1 c-main mb-3 sticky-top`}>
         Categories {categories && `(${categories.length})`}{" "}
       </h3>
       <div className="auto-grid">

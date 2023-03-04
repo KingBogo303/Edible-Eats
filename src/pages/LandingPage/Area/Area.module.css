@@ -1,0 +1,9 @@
+.btnContainer {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+.btnContainer button {
+  background-color: var(--secondary-color);
+  border: none;
+}

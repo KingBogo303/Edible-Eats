@@ -1,9 +1,9 @@
 import React from "react";
-import styles from "./CategoryCard.module.css";
+import styles from "./AreaCard.module.css";
 import Button from "react-bootstrap/Button";
 import Card from "react-bootstrap/Card";
 
-const CategoryCard = ({ item }) => {
+const AreaCard = ({ item }) => {
   console.log(item);
   return (
     <div>
@@ -24,4 +24,4 @@ const CategoryCard = ({ item }) => {
   );
 };
 
-export default CategoryCard;
+export default AreaCard;

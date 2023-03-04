@@ -3,7 +3,7 @@
   position: fixed;
   bottom: 3%;
   right: 2%;
-  z-index: 1000;
+  z-index: 9999;
   background-color: var(--main-color);
   justify-content: center;
   align-items: center;

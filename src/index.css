@@ -46,3 +46,7 @@ body {
   row-gap: 1.5em;
   grid-template-columns: repeat(auto-fit, minmax(20em, auto));
 }
+.stickyHead {
+  background-color: var(--white);
+  padding: 1rem;
+}

@@ -22,8 +22,8 @@ const LandingPage = () => {
           alt=" food"
         />
       </div>
-      <Category />
       <Area />
+      <Category />
       <BackToTopBtn />
     </React.Fragment>
   );

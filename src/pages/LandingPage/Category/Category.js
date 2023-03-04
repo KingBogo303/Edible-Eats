@@ -5,6 +5,9 @@ import Container from "react-bootstrap/Container";
 import CategoryCard from "./CategoryCard";
 
 import { getAllCategory } from "../../../http-requests/http-requests";
+
+import Loader from "../../../components/Loader";
+
 const Category = () => {
   const [categories, setCategories] = useState(null);
   const getCategory = async () => {
@@ -23,7 +26,7 @@ const Category = () => {
       </h3>
       <div className="auto-grid">
         {!categories ? (
-          <p>searching</p>
+          <Loader />
         ) : (
           categories.map((Category) => (
             <CategoryCard key={Category.idCategory} item={Category} />

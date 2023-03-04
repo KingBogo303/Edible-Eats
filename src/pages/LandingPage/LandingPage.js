@@ -3,9 +3,9 @@ import styles from "./LandingPage.module.css";
 
 import heroDesk from "../../assets/images/hero-desktop.jpg";
 import heroMob from "../../assets/images/hero-mobile.jpg";
-import Category from "./Category/Category";
+import Category from "./CategoryComp/Category";
 import BackToTopBtn from "../../components/BackToTopBtn";
-import Area from "./Area/Area";
+import Area from "./AreaComp/Area";
 
 const LandingPage = () => {
   return (

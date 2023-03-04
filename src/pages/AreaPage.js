@@ -1,7 +1,9 @@
 import React, { useEffect, useState } from "react";
 import Container from "react-bootstrap/Container";
 import { useParams } from "react-router-dom";
+import ItemCard from "../components/ItemCard";
 import Loader from "../components/Loader";
+import BackToTopBtn from "../components/BackToTopBtn";
 
 import { filterByArea } from "../http-requests/http-requests";
 
@@ -20,8 +22,17 @@ const AreaPage = () => {
   }, []);
 
   return (
-    <Container>
-      {!data ? <Loader /> : <div>{JSON.stringify(data)}</div>}
+    <Container className="py-3">
+      {!data ? (
+        <Loader />
+      ) : (
+        <div className="auto-grid">
+          {data.map((item) => (
+            <ItemCard item={item} />
+          ))}
+        </div>
+      )}
+      <BackToTopBtn />
     </Container>
   );
 };

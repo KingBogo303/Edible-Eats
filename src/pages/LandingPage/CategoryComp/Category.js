@@ -29,7 +29,6 @@ const Category = () => {
         ) : (
           categories.map((Category) => (
             <ItemCard key={Category.idCategory} item={Category} />
-            // <CategoryCard key={Category.idCategory} item={Category} />
           ))
         )}
       </div>

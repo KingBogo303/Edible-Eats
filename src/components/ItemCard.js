@@ -9,12 +9,14 @@ const ItemCard = ({ item }) => {
       <Card>
         <Card.Img
           variant="top"
-          src={item.strCategoryThumb}
+          src={item.strCategoryThumb || item.strMealThumb}
           className={styles.cardImg}
         />
         <Card.Body className="p-4">
-          <Card.Title className="fs-2">{item.strCategory}</Card.Title>
-          <Button variant="primary" className={`fs-4 ${styles.btn}`}>
+          <Card.Title className="fs-2">
+            {item.strCategory || item.strMeal}
+          </Card.Title>
+          <Button variant="danger" className={`fs-4 ${styles.btn}`}>
             View
           </Button>
         </Card.Body>

@@ -11,15 +11,16 @@ const Header = () => {
     <React.Fragment>
       <Navbar bg="light" expand="lg" id="top">
         <Container>
-          <Navbar.Brand href="#home" className="logo">
+          <Navbar.Brand href="/" className="logo">
             <img src={logo} alt="edible eats logo" />
           </Navbar.Brand>
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="ms-auto fs-3">
-              <Nav.Link className="px-3" href="#home">
+              <Nav.Link className="px-3" href="/">
                 Home
               </Nav.Link>
+
               <Nav.Link className="px-3" href="#categories">
                 Categories
               </Nav.Link>

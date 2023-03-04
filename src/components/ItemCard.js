@@ -1,9 +1,9 @@
+import styles from "./ItemCard.module.css";
 import React from "react";
-import styles from "./CategoryCard.module.css";
 import Button from "react-bootstrap/Button";
 import Card from "react-bootstrap/Card";
 
-const CategoryCard = ({ item }) => {
+const ItemCard = ({ item }) => {
   return (
     <div>
       <Card>
@@ -23,4 +23,4 @@ const CategoryCard = ({ item }) => {
   );
 };
 
-export default CategoryCard;
+export default ItemCard;

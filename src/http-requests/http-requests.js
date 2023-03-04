@@ -50,6 +50,14 @@ export const filterByCategory = async (filterTerm) => {
 export const filterByArea = async (filterTerm) => {
   const response =
     await fetch(`https://www.themealdb.com/api/json/v1/1/filter.php?a=${filterTerm}
-  `).then((response) => response.json());
+  `)
+      .then((response) => response.json())
+
+      .then((data) => {
+        return data.meals;
+      })
+      .catch((err) => {
+        console.log(err);
+      });
   return response;
 };

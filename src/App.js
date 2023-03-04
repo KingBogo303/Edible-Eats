@@ -1,6 +1,7 @@
 import React from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Header from "./components/Header";
+import AreaPage from "./pages/AreaPage";
 import Area from "./pages/LandingPage/AreaComp/Area";
 import LandingPage from "./pages/LandingPage/LandingPage";
 function App() {
@@ -10,7 +11,7 @@ function App() {
         <Header />
         <Routes>
           <Route element={<LandingPage />} path="/" />
-          <Route element={<Area />} path="/area/:name" />
+          <Route element={<AreaPage />} path="/area/:name" />
         </Routes>
       </BrowserRouter>
     </div>

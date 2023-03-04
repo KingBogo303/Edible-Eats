@@ -2,11 +2,10 @@ import React, { useEffect, useState } from "react";
 
 import Container from "react-bootstrap/Container";
 
-import CategoryCard from "./CategoryCard";
-
 import { getAllCategory } from "../../../http-requests/http-requests";
 
 import Loader from "../../../components/Loader";
+import ItemCard from "../../../components/ItemCard";
 
 const Category = () => {
   const [categories, setCategories] = useState(null);
@@ -29,7 +28,8 @@ const Category = () => {
           <Loader />
         ) : (
           categories.map((Category) => (
-            <CategoryCard key={Category.idCategory} item={Category} />
+            <ItemCard key={Category.idCategory} item={Category} />
+            // <CategoryCard key={Category.idCategory} item={Category} />
           ))
         )}
       </div>

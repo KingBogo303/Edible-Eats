@@ -4,12 +4,9 @@ import styles from "./LandingPage.module.css";
 import heroDesk from "../../assets/images/hero-desktop.jpg";
 import heroMob from "../../assets/images/hero-mobile.jpg";
 import Category from "./Category/Category";
-import { FiArrowUp } from "react-icons/fi";
+import BackToTopBtn from "../../components/BackToTopBtn";
 
 const LandingPage = () => {
-  const buttonClasses = `${styles.toTopBtn} ${
-    window.scrollY >= 10 && styles.open
-  }`;
   return (
     <React.Fragment>
       <div className="hero mb-5">
@@ -25,9 +22,7 @@ const LandingPage = () => {
         />
       </div>
       <Category />
-      <a href="#root" className={buttonClasses}>
-        <FiArrowUp className={styles.Arr} />
-      </a>
+      <BackToTopBtn />
     </React.Fragment>
   );
 };

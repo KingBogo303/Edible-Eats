@@ -1,0 +1,27 @@
+.toTopBtn {
+  display: inline-flex;
+  position: fixed;
+  bottom: 3%;
+  right: 2%;
+  z-index: 1000;
+  background-color: var(--main-color);
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  width: 5em;
+  height: 5em;
+  animation: appear ease 0.35s;
+}
+.Arr {
+  color: var(--white);
+  width: 3em;
+  height: 3em;
+}
+@keyframes appear {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}

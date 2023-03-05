@@ -3,7 +3,7 @@ import React from "react";
 import Button from "react-bootstrap/Button";
 import Card from "react-bootstrap/Card";
 
-const ItemCard = ({ item }) => {
+const ItemCard = ({ item, onClick }) => {
   return (
     <div>
       <Card>
@@ -16,7 +16,11 @@ const ItemCard = ({ item }) => {
           <Card.Title className="fs-2">
             {item.strMeal || item.strCategory}
           </Card.Title>
-          <Button variant="danger" className={`fs-4 ${styles.btn}`}>
+          <Button
+            variant="danger"
+            onClick={onClick}
+            className={`fs-4 ${styles.btn}`}
+          >
             View
           </Button>
         </Card.Body>

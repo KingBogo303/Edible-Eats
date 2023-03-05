@@ -6,12 +6,19 @@ import { getAllCategory } from "../../../http-requests/http-requests";
 
 import Loader from "../../../components/Loader";
 import ItemCard from "../../../components/ItemCard";
+import { useNavigate } from "react-router-dom";
 
 const Category = () => {
+  const navigate = useNavigate();
+
   const [categories, setCategories] = useState(null);
   const getCategory = async () => {
     const data = await getAllCategory();
     setCategories(data);
+  };
+
+  const handleClick = (category) => {
+    navigate(`category/${category}`);
   };
 
   useEffect(() => {
@@ -28,7 +35,11 @@ const Category = () => {
           <Loader />
         ) : (
           categories.map((Category) => (
-            <ItemCard key={Category.idCategory} item={Category} />
+            <ItemCard
+              key={Category.idCategory}
+              item={Category}
+              onClick={() => handleClick(Category.strCategory)}
+            />
           ))
         )}
       </div>

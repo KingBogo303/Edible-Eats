@@ -1,10 +1,10 @@
 import React, { useEffect, useState } from "react";
 import Container from "react-bootstrap/Container";
 import { useParams } from "react-router-dom";
-import ItemCard from "../../components/ItemCard";
-import Loader from "../../components/Loader";
-import BackToTopBtn from "../../components/BackToTopBtn";
-import { filterByLetter } from "../../http-requests/http-requests";
+import ItemCard from "../components/ItemCard";
+import Loader from "../components/Loader";
+import BackToTopBtn from "../components/BackToTopBtn";
+import { filterByLetter } from "../http-requests/http-requests";
 
 const MealByLetter = () => {
   const { letter } = useParams();
@@ -18,11 +18,10 @@ const MealByLetter = () => {
     fetchData();
   }, []);
 
-  console.log(data);
   return (
     <Container className="py-3">
       <h3 className={`stickyHead fs-1 c-main mb-3 sticky-top`}>
-        Meals Based On Letter
+        Meals Starting with "{letter}"
       </h3>
 
       {data === undefined ? (

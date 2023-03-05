@@ -12,7 +12,7 @@ export const getAllCategory = async () => {
   return response;
 };
 
-export const getAllArea = async (searchTerm) => {
+export const getAllArea = async () => {
   const response = await fetch(
     `https://www.themealdb.com/api/json/v1/1/list.php?a=list`
   )
@@ -43,7 +43,14 @@ export const getMealById = async (id) => {
 export const filterByCategory = async (filterTerm) => {
   const response = await fetch(
     `https://www.themealdb.com/api/json/v1/1/filter.php?c=${filterTerm}`
-  ).then((response) => response.json());
+  )
+    .then((response) => response.json())
+    .then((data) => {
+      return data.meals;
+    })
+    .catch((err) => {
+      console.log(err);
+    });
   return response;
 };
 

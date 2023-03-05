@@ -29,11 +29,14 @@ const Header = () => {
                 title="Dropdown"
                 id="basic-nav-dropdown"
               >
+                <NavDropdown.Item href="#areas" className="px-3 fs-4">
+                  Find By Area
+                </NavDropdown.Item>
                 <NavDropdown.Item className="px-3 fs-4" href="#categories">
                   Find By Category
                 </NavDropdown.Item>
-                <NavDropdown.Item href="#areas" className="px-3 fs-4">
-                  Find By Area
+                <NavDropdown.Item href="#letters" className="px-3 fs-4">
+                  Find By Letter
                 </NavDropdown.Item>
               </NavDropdown>
             </Nav>

@@ -23,8 +23,8 @@ const Area = () => {
     getArea();
   }, []);
 
-  const goToAreaPage = (name) => {
-    navigate(`/area/${name}`);
+  const goToAreasPage = (name) => {
+    navigate(`/meal/${name}`);
   };
 
   return (
@@ -39,7 +39,7 @@ const Area = () => {
           area.map((area) => (
             <Button
               key={area.strArea}
-              onClick={() => goToAreaPage(area.strArea)}
+              onClick={() => goToAreasPage(area.strArea)}
               variant="danger"
               className="fs-3 "
             >

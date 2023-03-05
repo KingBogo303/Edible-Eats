@@ -14,7 +14,7 @@ const ItemCard = ({ item }) => {
         />
         <Card.Body className="p-4">
           <Card.Title className="fs-2">
-            {item.strCategory || item.strMeal}
+            {item.strMeal || item.strCategory}
           </Card.Title>
           <Button variant="danger" className={`fs-4 ${styles.btn}`}>
             View

@@ -1,17 +1,16 @@
 import React, { useEffect, useState } from "react";
 import Container from "react-bootstrap/Container";
 import { useParams } from "react-router-dom";
-import ItemCard from "../components/ItemCard";
-import Loader from "../components/Loader";
-import BackToTopBtn from "../components/BackToTopBtn";
+import ItemCard from "../../components/ItemCard";
+import Loader from "../../components/Loader";
+import BackToTopBtn from "../../components/BackToTopBtn";
+import { filterByLetter } from "../../http-requests/http-requests";
 
-import { filterByArea } from "../http-requests/http-requests";
-
-const AreaPage = () => {
-  const { name } = useParams();
-  const [data, setData] = useState(null);
+const MealByLetter = () => {
+  const { letter } = useParams();
+  const [data, setData] = useState();
   const fetchData = async () => {
-    const data = await filterByArea(name);
+    const data = await filterByLetter(letter);
     setData(data);
   };
 
@@ -19,10 +18,11 @@ const AreaPage = () => {
     fetchData();
   }, []);
 
+  console.log(data);
   return (
     <Container className="py-3">
       <h3 className={`stickyHead fs-1 c-main mb-3 sticky-top`}>
-        Meals Based On Area
+        Meals Based On Letter
       </h3>
 
       {data === undefined ? (
@@ -41,4 +41,4 @@ const AreaPage = () => {
   );
 };
 
-export default AreaPage;
+export default MealByLetter;

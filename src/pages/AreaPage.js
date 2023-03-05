@@ -15,20 +15,22 @@ const AreaPage = () => {
     setData(data);
   };
 
-  console.log(data);
-
   useEffect(() => {
     fetchData();
   }, []);
 
   return (
     <Container className="py-3">
+      <h3 className={`stickyHead fs-1 c-main mb-3 sticky-top`}>
+        Meals Based On Area
+      </h3>
+
       {!data ? (
         <Loader />
       ) : (
         <div className="auto-grid">
           {data.map((item) => (
-            <ItemCard item={item} />
+            <ItemCard key={item.strMeal} item={item} />
           ))}
         </div>
       )}

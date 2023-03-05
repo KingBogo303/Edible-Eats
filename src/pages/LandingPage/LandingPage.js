@@ -6,6 +6,7 @@ import heroMob from "../../assets/images/hero-mobile.jpg";
 import Category from "./CategoryComp/Category";
 import BackToTopBtn from "../../components/BackToTopBtn";
 import Area from "./AreaComp/Area";
+import MealsByLetter from "./ByLetter/MealsByLetter";
 
 const LandingPage = () => {
   return (
@@ -24,6 +25,7 @@ const LandingPage = () => {
       </div>
       <Area />
       <Category />
+      <MealsByLetter />
       <BackToTopBtn />
     </React.Fragment>
   );

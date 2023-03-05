@@ -9,7 +9,7 @@ import { filterByArea } from "../http-requests/http-requests";
 
 const AreaPage = () => {
   const { name } = useParams();
-  const [data, setData] = useState(null);
+  const [data, setData] = useState();
   const fetchData = async () => {
     const data = await filterByArea(name);
     setData(data);
@@ -21,9 +21,7 @@ const AreaPage = () => {
 
   return (
     <Container className="py-3">
-      <h3 className={`stickyHead fs-1 c-main mb-3 sticky-top`}>
-        Meals Based On Area
-      </h3>
+      <h3 className={`stickyHead fs-1 c-main mb-3 sticky-top`}>{name} Meals</h3>
 
       {data === undefined ? (
         <Loader />

@@ -6,7 +6,7 @@ import Card from "react-bootstrap/Card";
 const ItemCard = ({ item, onClick }) => {
   return (
     <div>
-      <Card>
+      <Card className={styles.card}>
         <Card.Img
           variant="top"
           src={item.strCategoryThumb || item.strMealThumb}

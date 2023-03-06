@@ -1,7 +1,19 @@
+.card {
+  overflow: hidden;
+  transition: var(--transition);
+}
+.card:hover {
+  background-color: #e9ecef;
+}
+.card:hover .cardImg {
+  transform: scale(1.05);
+}
+
 .cardImg {
   width: 100%;
   aspect-ratio: 2/1.5;
   object-fit: cover;
+  transition: var(--transition);
 }
 .btn {
   background-color: var(--main-color);

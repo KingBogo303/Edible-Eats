@@ -53,3 +53,9 @@ body {
   background-color: var(--white);
   padding: 1rem;
 }
+@media (max-width: 442px) {
+  .auto-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+  }
+}

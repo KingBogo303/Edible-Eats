@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useCallback, useEffect, useState } from "react";
 import Container from "react-bootstrap/Container";
 import { useParams } from "react-router-dom";
 import ItemCard from "../components/ItemCard";
@@ -9,14 +9,15 @@ import { filterByLetter } from "../http-requests/http-requests";
 const MealByLetter = () => {
   const { letter } = useParams();
   const [data, setData] = useState();
-  const fetchData = async () => {
+
+  const fetchData = useCallback(async () => {
     const data = await filterByLetter(letter);
     setData(data);
-  };
+  }, [letter]);
 
   useEffect(() => {
     fetchData();
-  }, []);
+  }, [fetchData]);
 
   return (
     <Container className="py-3">

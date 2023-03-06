@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useCallback, useEffect, useState } from "react";
 import Container from "react-bootstrap/Container";
 import { useParams } from "react-router-dom";
 import ItemCard from "../components/ItemCard";
@@ -10,14 +10,14 @@ import { filterByArea } from "../http-requests/http-requests";
 const AreaPage = () => {
   const { name } = useParams();
   const [data, setData] = useState();
-  const fetchData = async () => {
+  const fetchData = useCallback(async () => {
     const data = await filterByArea(name);
     setData(data);
-  };
+  }, [name]);
 
   useEffect(() => {
     fetchData();
-  }, []);
+  }, [fetchData]);
 
   return (
     <Container className="py-3">

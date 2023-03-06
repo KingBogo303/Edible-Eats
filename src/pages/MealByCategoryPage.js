@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useCallback } from "react";
 import Container from "react-bootstrap/Container";
 import { useParams } from "react-router-dom";
 import ItemCard from "../components/ItemCard";
@@ -9,14 +9,14 @@ import { filterByCategory } from "../http-requests/http-requests";
 const MealByCategoryPage = () => {
   const { category } = useParams();
   const [data, setData] = useState();
-  const fetchData = async () => {
+  const fetchData = useCallback(async () => {
     const data = await filterByCategory(category);
     setData(data);
-  };
+  }, [category]);
 
   useEffect(() => {
     fetchData();
-  }, []);
+  }, [fetchData]);
 
   return (
     <Container className="py-3">

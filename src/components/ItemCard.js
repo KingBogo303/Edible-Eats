@@ -12,7 +12,7 @@ const ItemCard = ({ item, onClick }) => {
           src={item.strCategoryThumb || item.strMealThumb}
           className={styles.cardImg}
         />
-        <Card.Body className="p-4">
+        <Card.Body className="p-2 p-sm-4">
           <Card.Title className="fs-2">
             {item.strMeal || item.strCategory}
           </Card.Title>

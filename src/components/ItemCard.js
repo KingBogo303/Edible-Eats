@@ -13,7 +13,7 @@ const ItemCard = ({ item, onClick }) => {
           className={styles.cardImg}
         />
         <Card.Body className="p-2 p-sm-4">
-          <Card.Title className="fs-4">
+          <Card.Title className="fs-4 fs-sm-2">
             {item.strMeal || item.strCategory}
           </Card.Title>
           <Button
